@@ -127,6 +127,114 @@
       color: #6d214f;
       margin-top: 3em;
     }
+
+    .formulario-contacto {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      background-color: #fff;
+      padding: 1.5em;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      margin-top: 2em;
+      border-left: 5px solid #ffb6b9;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4em;
+    }
+
+    .formulario-contacto label {
+      font-weight: bold;
+      color: #6d214f;
+    }
+
+    .formulario-contacto input,
+    .formulario-contacto select,
+    .formulario-contacto textarea {
+      padding: 0.6em;
+      border: 1px solid #ffd6e0;
+      border-radius: 8px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 1em;
+    }
+
+    .formulario-contacto button {
+      background-color: #f77fbe;
+      color: white;
+      border: none;
+      padding: 0.8em;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .formulario-contacto button:hover {
+      background-color: #e061a6;
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2em;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    th, td {
+      padding: 1em;
+      text-align: center;
+      border: 1px solid #ffd6e0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    th {
+      background-color: #ffc2d1;
+      color: #6d214f;
+      font-weight: bold;
+    }
+
+    td {
+      background-color: #fff0f6;
+      color: #6d214f;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #ffe3e3;
+    }
+
+    tr:hover {
+      background-color: #ffb6b9;
+    }
+
+    caption {
+      font-size: 1.5em;
+      color: #b03a57;
+      margin-bottom: 1em;
+    }
+
+    @media screen and (max-width: 768px) {
+      table {
+        font-size: 0.9em;
+      }
+
+      th, td {
+        padding: 0.8em;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -136,31 +244,20 @@
   </header>
 
    <nav>
-    <a href="#contacto">Contacto</a>
     <a href="#sobre-mi">Sobre Mí</a>
     <a href="#formacion">Formación</a>
     <a href="#experiencia">Experiencia</a>
     <a href="#habilidades">Habilidades</a>
     <a href="#idiomas">Idiomas</a>
     <a href="#proyectos">Proyectos</a>
+    <a href="#referencias">Referencias</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 
   <main>
-
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <ul>
-        <li><strong>Email:</strong> <a href="mailto:katherineforero15@gmail.com">katherineforero15@gmail.com</a></li>
-        <li><strong>Teléfono:</strong> +593 97 985 2316</li>
-        <li><strong>Ubicación:</strong> Guayaquil, Ecuador</li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/katherineforero" target="_blank">linkedin.com/in/katherineforero</a></li>
-        <li><strong>GitHub:</strong> <a href="https://www.github.com/kathyforero" target="_blank">github.com/kathyforero</a></li>
-      </ul>
-    </section>
-
     <section id="sobre-mi">
       <h2>Sobre Mí</h2>
-      <p>Soy una persona comprometida, adaptable y enfocada en el trabajo en equipo. Me caracteriza la empatía, la comunicación efectiva y la pasión por la resolución de problemas. Busco ambientes positivos que fomenten el desarrollo personal y profesional continuo.</p>
+      <p>Estudiante de sexto semestre de Ingeniería en Computación en <a href="https://www.espol.edu.ec" target="_blank">ESPOL</a>. Soy una persona comprometida, adaptable y enfocada en el trabajo en equipo. Me caracteriza la empatía, la comunicación efectiva y la pasión por la resolución de problemas. Busco ambientes positivos que fomenten el desarrollo personal y profesional continuo.</p>
     </section>
 
     <section id="formacion">
@@ -248,11 +345,136 @@
         <li>
           <a href="https://github.com/kathyforero/LP-FINAL.git" target="_blank">📊 App Web de Venta de Vehículos</a><br>
           App con backend y frontend localizados para venta de vehículos.<br>
-          <em>Tecnologías:</em> Flutter, Dart, Java, SpringBoot. <strong>Estado:</strong> ✅ Completado
+          <em>Tecnologías:</em> Flutter, Dart, Java, SpringBoot. <strong>Estado:</strong> ✅ Completado<br><br>
+          <img src="https://i.postimg.cc/TwrYjTGT/login.png" alt="login.png" width="400">
+          <img src="https://i.postimg.cc/0NS8x9z7/register.png" alt="register.png" width="370">
         </li>
       </ul>
+      <table border="1" style="border-collapse: collapse; width: 100%; text-align: center; margin-top: 2em;">
+    <thead>
+      <tr>
+        <th>Habilidad</th>
+        <th>Nivel</th>
+        <th>Año de Experiencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Java</td>
+        <td>Avanzado</td>
+        <td>4 años</td>
+      </tr>
+      <tr>
+        <td>Python</td>
+        <td>Intermedio</td>
+        <td>2 años</td>
+      </tr>
+      <tr>
+        <td>Flutter</td>
+        <td>Básico</td>
+        <td>1 año</td>
+      </tr>
+    </tbody>
+  </table>
     </section>
 
+        <section id="referencias">
+    <h2>Referencias</h2>
+
+    <article>
+      <blockquote>"Katherine demostró un alto nivel de compromiso y eficiencia en todas las tareas asignadas. Su actitud proactiva y colaboración fueron claves para nuestro éxito."</blockquote>
+      <p><strong>Ing. Camila Herrera</strong><br>
+      Coordinadora de Proyectos, Tecnicentro Aguilar Mora<br>
+      Trabajó con Katherine en ventas y soporte técnico remoto en 2024. Destaca su capacidad de organización y trato al cliente.</p>
+    </article>
+
+    <article>
+      <blockquote>"Siempre fue una persona responsable, con gran disposición para aprender y asumir nuevos retos. Una colaboradora valiosa en cualquier equipo."</blockquote>
+      <p><strong>Miguel A. León</strong><br>
+      Mentor Académico, ESPOL<br>
+      Supervisó sus proyectos estudiantiles durante 2023-2024. Resalta su pensamiento crítico y actitud resiliente.</p>
+    </article>
+
+    <article>
+      <blockquote>"Una profesional en formación con gran iniciativa. Katherine aportó ideas innovadoras y siempre estuvo dispuesta a apoyar a sus compañeros."</blockquote>
+      <p><strong>Valeria Ruiz</strong><br>
+      Líder de Grupo, Proyecto de App Vehículos<br>
+      Compartió equipo en un proyecto académico de desarrollo en Java y JavaFX. Reconoce su liderazgo natural y compromiso.</p>
+    </article>
+  </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:katherineforero15@gmail.com">katherineforero15@gmail.com</a></li>
+        <li><strong>Teléfono:</strong> +593 97 985 2316</li>
+        <li><strong>Ubicación:</strong> Guayaquil, Ecuador</li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/katherineforero" target="_blank">linkedin.com/in/katherineforero</a></li>
+        <li><strong>GitHub:</strong> <a href="https://www.github.com/kathyforero" target="_blank">github.com/kathyforero</a></li>
+      </ul>
+      <div style="margin-top: 1em;">
+        <h3>Institución de Formación Educativa</h3>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.7388284974322!2d-79.96807033041352!3d-2.1446072990910417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d2e4be8cb2f%3A0x2288a308690df6ff!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral!5e0!3m2!1ses-419!2sec!4v1716137389236!5m2!1ses-419!2sec" 
+          width="100%" 
+          height="300" 
+          style="border:0; border-radius: 12px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    <h2>Formulario de Contacto</h2>
+    <form action="#" method="post" class="formulario-contacto">
+      
+      <div class="form-group">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="asunto">Asunto:</label>
+        <select id="asunto" name="asunto" required>
+          <option value="">Seleccione una opción</option>
+          <option value="consulta">Consulta</option>
+          <option value="propuesta">Propuesta</option>
+          <option value="otros">Otros</option>
+        </select>
+      </div>
+
+      <fieldset class="form-group">
+        <legend>¿Cómo prefieres ser contactado?</legend>
+        <label><input type="radio" name="contacto" value="email" required> Correo</label>
+        <label><input type="radio" name="contacto" value="telefono" required> Teléfono</label>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend>Intereses:</legend>
+        <label><input type="checkbox" name="intereses" value="colaboracion" required> Colaboración</label>
+        <label><input type="checkbox" name="intereses" value="mentoria" required> Mentoría</label>
+        <label><input type="checkbox" name="intereses" value="otro" required> Otro</label>
+      </fieldset>
+
+      <div class="form-group">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit">Enviar Mensaje</button>
+      </div>
+    </form>
+      </div>
+    </section>
+    <section id="video">
+    <h2>Video</h2>
+    <h4>Un videito para entretener 👍.</h4>  
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IxX_QHay02M?si=i32kbLIiAj13yeij" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>  
   </main>
 
   <footer>
