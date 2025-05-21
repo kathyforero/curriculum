@@ -3,239 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="CV, curriculum, curriculum vitae">
+  <meta name="author" content="Katherine Forero">
+  <meta name="description" content="Curriculum Vitae Katherine Forero">
+  <link rel="stylesheet" href="./stylesheets/styles.css">
   <title>Katherine Forero - Currículum Vitae</title>
-  <style>
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff0f6;
-      color: #333;
-    }
-
-    header {
-      background-color: #ffc2d1;
-      color: #6d214f;
-      padding: 2em 1em;
-      text-align: center;
-      border-bottom: 3px solid #f8a5c2;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.7em;
-      font-weight: bold;
-    }
-
-     nav {
-      background-color: #ffe3e3;
-      text-align: center;
-      padding: 1em;
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: #6d214f;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 2em 1em;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    section {
-      background-color: #fff;
-      padding: 1.5em;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      margin-bottom: 2em;
-      border-left: 5px solid #ffb6b9;
-    }
-
-    h2 {
-      color: #b03a57;
-      border-bottom: 1px solid #ffd6e0;
-      padding-bottom: 0.3em;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5em;
-    }
-
-    ul ul {
-      list-style-type: circle;
-      padding-left: 1.5em;
-    }
-
-    ol {
-      padding-left: 1.5em;
-    }
-
-    li {
-      margin-bottom: 0.7em;
-    }
-
-    a {
-      color: #c44569;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .bar-container {
-      background-color: #ffe3e3;
-      border-radius: 20px;
-      overflow: hidden;
-      margin-bottom: 10px;
-      height: 18px;
-    }
-
-    .bar {
-      height: 100%;
-      text-align: right;
-      padding-right: 10px;
-      color: white;
-      line-height: 18px;
-      font-size: 12px;
-      border-radius: 20px;
-    }
-
-    .bar.espanol { width: 100%; background-color: #f77fbe; }
-    .bar.ingles { width: 75%; background-color: #f9a8d4; }
-    .bar.frances { width: 40%; background-color: #fbcfe8; }
-
-    footer {
-      background-color: #ffc2d1;
-      text-align: center;
-      padding: 1em;
-      color: #6d214f;
-      margin-top: 3em;
-    }
-
-    .formulario-contacto {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      background-color: #fff;
-      padding: 1.5em;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      margin-top: 2em;
-      border-left: 5px solid #ffb6b9;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4em;
-    }
-
-    .formulario-contacto label {
-      font-weight: bold;
-      color: #6d214f;
-    }
-
-    .formulario-contacto input,
-    .formulario-contacto select,
-    .formulario-contacto textarea {
-      padding: 0.6em;
-      border: 1px solid #ffd6e0;
-      border-radius: 8px;
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 1em;
-    }
-
-    .formulario-contacto button {
-      background-color: #f77fbe;
-      color: white;
-      border: none;
-      padding: 0.8em;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .formulario-contacto button:hover {
-      background-color: #e061a6;
-    }
-
-    fieldset {
-      border: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4em;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 2em;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    th, td {
-      padding: 1em;
-      text-align: center;
-      border: 1px solid #ffd6e0;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    th {
-      background-color: #ffc2d1;
-      color: #6d214f;
-      font-weight: bold;
-    }
-
-    td {
-      background-color: #fff0f6;
-      color: #6d214f;
-    }
-
-    tr:nth-child(even) td {
-      background-color: #ffe3e3;
-    }
-
-    tr:hover {
-      background-color: #ffb6b9;
-    }
-
-    caption {
-      font-size: 1.5em;
-      color: #b03a57;
-      margin-bottom: 1em;
-    }
-
-    @media screen and (max-width: 768px) {
-      table {
-        font-size: 0.9em;
-      }
-
-      th, td {
-        padding: 0.8em;
-      }
-    }
-
-  </style>
 </head>
 <body>
 
@@ -346,8 +118,8 @@
           <a href="https://github.com/kathyforero/LP-FINAL.git" target="_blank">📊 App Web de Venta de Vehículos</a><br>
           App con backend y frontend localizados para venta de vehículos.<br>
           <em>Tecnologías:</em> Flutter, Dart, Java, SpringBoot. <strong>Estado:</strong> ✅ Completado<br><br>
-          <img src="https://i.postimg.cc/TwrYjTGT/login.png" alt="login.png" width="400">
-          <img src="https://i.postimg.cc/0NS8x9z7/register.png" alt="register.png" width="370">
+          <img id="photo" src="https://i.postimg.cc/TwrYjTGT/login.png" alt="login.png" width="400">
+          <img id="photo" src="https://i.postimg.cc/0NS8x9z7/register.png" alt="register.png" width="370">
         </li>
       </ul>
       <table border="1" style="border-collapse: collapse; width: 100%; text-align: center; margin-top: 2em;">
@@ -413,7 +185,7 @@
         <li><strong>GitHub:</strong> <a href="https://www.github.com/kathyforero" target="_blank">github.com/kathyforero</a></li>
       </ul>
       <div style="margin-top: 1em;">
-        <h3>Institución de Formación Educativa</h3>
+        <h3 class="subtitle">Institución de Formación Educativa</h3>
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.7388284974322!2d-79.96807033041352!3d-2.1446072990910417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d2e4be8cb2f%3A0x2288a308690df6ff!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral!5e0!3m2!1ses-419!2sec!4v1716137389236!5m2!1ses-419!2sec" 
           width="100%" 
@@ -423,7 +195,7 @@
           loading="lazy" 
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-    <h2>Formulario de Contacto</h2>
+    <h3 class="subtitle">Formulario de Contacto</h3>
     <form action="#" method="post" class="formulario-contacto">
       
       <div class="form-group">
