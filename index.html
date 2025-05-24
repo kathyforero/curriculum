@@ -7,12 +7,16 @@
   <meta name="author" content="Katherine Forero">
   <meta name="description" content="Curriculum Vitae Katherine Forero">
   <link rel="stylesheet" href="./stylesheets/styles.css">
+  <link rel="icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/business-pixel-crafting-financial/512/document-512.png">
   <title>Katherine Forero - Currículum Vitae</title>
 </head>
 <body>
 
   <header>
     <h1>Katherine Forero</h1>
+    <button id="modoToggle" aria-label="Cambiar modo">
+    🌙
+    </button>
   </header>
 
    <nav>
@@ -252,6 +256,16 @@
   <footer>
     <p>&copy; 2025 Katherine Forero</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('modoToggle');
+    const body = document.body;
+
+    toggle.addEventListener('click', () => {
+        body.classList.toggle('modo-oscuro');
+        toggle.textContent = body.classList.contains('modo-oscuro') ? '☀️' : '🌙';
+    });
+  </script>
 
 </body>
 </html>

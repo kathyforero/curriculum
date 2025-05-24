@@ -14,15 +14,36 @@ body {
 }
 
 header {
+    position: relative;
+    overflow: hidden; /* evita desbordamientos del blur */
+    z-index: 1;
+    background: none; /* quitamos el fondo directo, lo pondrá el ::before */
+    min-height: 130px;
+
+    display: flex; /* 🟡 Activa Flexbox */
+    align-items: center; /* 🟢 Centra verticalmente */
+    justify-content: center; /* 🔵 Centra horizontalmente */
+    text-align: center; /* 🔤 Centra el texto si es multilinea */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     background-image: url('https://img.freepik.com/vector-premium/cielo-rosa-azul-nubes-montanas-fondo_889056-162354.jpg');
     background-size: cover;
-    background-position: 0px -80px;
+    background-position: 0 -80px;
     background-repeat: no-repeat;
-    height: 80px;
-    color: #d4739f;
-    padding: 2em 1em;
-    text-align: center;
-    border-bottom: 3px solid #fcbfd8;
+    height: 300px;
+    filter: blur(8px);
+    z-index: 0;
+    transform: scale(1.05); /* evita bordes visibles al difuminar */
+}
+
+/* Asegúrate de que el contenido del header esté por encima */
+header > * {
+    position: relative;
+    z-index: 1;
 }
 
 .subtitle {
@@ -240,6 +261,149 @@ caption {
     font-size: 1.5em;
     color: #d4739f;
     margin-bottom: 1em;
+}
+
+body.modo-oscuro {
+    background-color: #1c1b33;
+    color: #f4eaff;
+}
+
+body.modo-oscuro header::before {
+    background-image: url('https://us.123rf.com/450wm/vector1544/vector15442501/vector1544250111374/240036692-spectacular-night-sky-adorned-with-clouds-and-gleaming-stars.jpg?ver=6'); /* reemplaza con tu imagen oscura */
+}
+
+body.modo-oscuro nav,
+body.modo-oscuro footer {
+    background-color: #2c254d;
+    color: #ffde59;
+}
+
+body.modo-oscuro section,
+body.modo-oscuro .formulario-contacto {
+    background-color: #2e2c4d;
+    color: #f4eaff;
+    border-color: #463d66;
+}
+
+body.modo-oscuro a {
+    color: #ffde59;
+}
+
+body.modo-oscuro a:hover {
+    color: #ffe873;
+}
+
+body.modo-oscuro table th {
+    background-color: #463d66;
+    color: #ffde59;
+}
+
+body.modo-oscuro table td {
+    background-color: #2e2c4d;
+    color: #f4eaff;
+}
+
+body.modo-oscuro tr:hover {
+    background-color: #463d66;
+}
+
+body.modo-oscuro nav a:hover {
+    color: #ffffc4;
+    text-shadow:
+        0 0 5px #f9f871,
+        0 0 10px #f9f871;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+body.modo-oscuro h1 {
+    color: #ffffff;
+    text-shadow:
+        0 0 5px #f9f871,
+        0 0 10px #f9f871,
+        0 0 20px #f9f871,
+        0 0 40px #f9f871;
+    transition: all 0.3s ease;
+}
+
+body.modo-oscuro h2 {
+    color: #ffde59; /* Amarillo lunar */
+    border-bottom: 1px solid #ffde59;
+}
+
+body.modo-oscuro h3 {
+    color: #e9d2f0; /* Amarillo lunar */
+}
+
+body.modo-oscuro .formulario-contacto {
+    background-color: #2e2c4d;
+    border: 1px solid #463d66;
+    color: #f4eaff;
+}
+
+body.modo-oscuro .formulario-contacto input,
+body.modo-oscuro .formulario-contacto textarea,
+body.modo-oscuro .formulario-contacto select {
+    background-color: #1c1b33;
+    color: #f4eaff;
+    border: 1px solid #e9d2f0;
+}
+
+body.modo-oscuro .formulario-contacto label {
+    font-weight: bold;
+    color: #e9d2f0;
+}
+
+body.modo-oscuro .formulario-contacto button {
+    background-color: #9969c0;
+    color: white;
+    border: none;
+    padding: 0.8em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+body.modo-oscuro .formulario-contacto input::placeholder,
+body.modo-oscuro .formulario-contacto textarea::placeholder {
+    color: #a99bc9;
+}
+
+body.modo-oscuro .bar-container {
+    background-color: #2e1f50; /* fondo más oscuro de contenedor */
+}
+
+body.modo-oscuro .bar.espanol {
+    background-color: #7c4dff;
+}
+
+body.modo-oscuro .bar.ingles {
+    background-color: #b388ff;
+}
+
+body.modo-oscuro .bar.frances {
+    background-color: #e0b3ff;
+}
+
+body.modo-oscuro .bar {
+    color: #1a1035; /* texto sobre las barras */
+}
+
+#modoToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff3b0;
+    transition: transform 0.3s ease;
+}
+
+#modoToggle:hover {
+    transform: scale(1.2);
 }
 
 @media screen and (max-width: 768px) {
