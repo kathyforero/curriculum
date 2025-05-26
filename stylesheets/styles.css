@@ -302,7 +302,7 @@ body.modo-oscuro header::before {
 body.modo-oscuro nav,
 body.modo-oscuro footer {
     background-color: #2c254d;
-    color: #ffde59;
+    color: #f9ce71;
 }
 
 body.modo-oscuro section,
@@ -346,10 +346,10 @@ body.modo-oscuro nav a:hover {
 body.modo-oscuro h1 {
     color: #ffffff;
     text-shadow:
-        0 0 5px #f9f871,
-        0 0 10px #f9f871,
-        0 0 20px #f9f871,
-        0 0 40px #f9f871;
+        0 0 5px #f9ce71,
+        0 0 10px #f9ce71,
+        0 0 20px #f9ce71,
+        0 0 40px #f9ce71;
     transition: all 0.3s ease;
 }
 
